@@ -9,7 +9,7 @@ pipeline{
             agent any
             steps{
                 withSonarQubeEnv('sonar-server'){
-                    bat 'java-version'
+                    bat 'java -version'
                     bat 'mvn clean package sonar:sonar'
                 }
             }
